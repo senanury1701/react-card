@@ -7,7 +7,7 @@ import php from "../assets/php.png";
 import javaScript from "../assets/javascript.png";
 import html from "../assets/html.png";
 
-export const languages = [
+const languages = [
   {
     name: "html",
     img: html,
@@ -24,6 +24,16 @@ export const languages = [
     options: ["Website Development", "1995", "Brendan Eich"],
   },
   {
+    name: "c++",
+    img: cpp,
+    options: ["Game Dev.", "1980s", "Bjarne Stroustrup"],
+  },
+  {
+    name: "php",
+    img: php,
+    options: ["BackEnd", "1995", "	Rasmus Lerdorf"],
+  },
+  {
     name: "typeScript",
     img: typeScript,
     options: ["Superset of JavaScript", "2012", "Anders Hejlsberg "],
@@ -38,14 +48,5 @@ export const languages = [
     img: java,
     options: ["BackEnd", "1990s", "Sun Microsystems"],
   },
-  {
-    name: "c++",
-    img: cpp,
-    options: ["Game Dev.", "1980s", "Bjarne Stroustrup"],
-  },
-  {
-    name: "php",
-    img: php,
-    options: ["BackEnd", "1995", "	Rasmus Lerdorf"],
-  },
-];
+]
+export default languages
