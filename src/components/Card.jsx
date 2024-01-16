@@ -1,20 +1,25 @@
 import './Card.css'
+import { useState } from 'react'
+
 const Card = (data) => {
+    const [isVisible, setIsVisible] = useState(true);
+
+    const toggleVisibility = () => {
+      setIsVisible(!isVisible);
+    };
     return (
-        <div className='card'>
-            <div className='card-item'>
+        <div className='card' onClick={toggleVisibility}>
+            {isVisible &&<div className='card-item'>
                 <img src={data.img} alt=""  /> 
-                <p>{data.name}</p>                  
-            </div>
-            <div>
-                <div className='back'>
-                    <ul>
-                        {data.options.map((option, index) => (
-                            <li key={index}>{option}</li>
-                        ))}
-                    </ul>
-                </div>                    
-            </div>              
+                <h5>{data.name}</h5>                  
+            </div>}
+            {!isVisible && <div  className='card-item'>
+                <ul>
+                    {data.options.map((option, index) => (
+                        <li key={index}><p>{option}</p></li>
+                    ))}
+                </ul>                 
+            </div>}          
         </div>
     )
 }
