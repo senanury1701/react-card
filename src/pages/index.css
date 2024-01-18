@@ -7,7 +7,7 @@
 
   .logo:hover {
     filter: drop-shadow(0 0 2em #ffffff);
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
   .logo.react:hover {
     filter: drop-shadow(0 0 2em #61dafb);
